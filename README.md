@@ -41,5 +41,9 @@ Note: This is the most lossy operation.
 ### Run Length Encoder
 The last step is to apply the Run Length Encoder (RLE). It's a form of lossless data compression in which runs of data (consecutive occurrences of the same data value) are stored as a single occurrence of that data value and a count of its consecutive occurrences. Components are read in zig-zag order to maximize the length of runs of zeroes.
 
-##Examples
+## Examples
 Two 8x8 pixel matrix and two 8x8 quantization matrix are provided.
+
+## TODO
+- [ ] Create optimized version using vectorization and OpenMP and perform benchmarking
+- [ ] Create elixir version
