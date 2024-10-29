@@ -17,17 +17,22 @@ Binary expects two filenames as arguments:
 ### DCT
 A DCT is a Fourier-related transform similar to the discrete Fourier transform (DFT), but using only real numbers. Its usage in image compression lies in its property that, for a typical image, most of the visually significant information about the image is concentrated in just a few coefficients of the DCT. 
 
-```math \begin{equation}
+```math
+\begin{equation}
 DCT(k, l) = \frac{1}{4} \, C(k) C(l) \sum_{x=0}^{N-1} \sum_{y=0}^{N-1} \text{matrix}(x, y) \cos\left( \frac{(2x + 1) k \pi}{2N} \right) \cos\left( \frac{(2y + 1) l \pi}{2N} \right)
-\end{equation}```
+\end{equation}
+```
 
 
-```math \begin{equation} C(u) = 
+```math
+\begin{equation}
+C(u) = 
 \begin{cases} 
 \frac{1}{\sqrt{2}} & \text{si } u = 0, \\
 1 & \text{si } u \neq 0.
 \end{cases}
-\end{equation}```
+\end{equation}
+```
 
 ### Quantize Matrix
 In this step, DCT coefficients are quantizied using the quantization matrix to obtain greater compression by discarding non-significant visual information. These are the higher frequencies, which the human visual system is less sensitive, that are quantized more.  The result are quantized DCT coefficients. 
